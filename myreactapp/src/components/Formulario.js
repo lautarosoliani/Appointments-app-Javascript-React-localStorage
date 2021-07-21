@@ -23,7 +23,22 @@ const Formulario = () => {
 
 
     //EXTRAER LOS VALORES
-    const { mascota, propietario, fecha, hora, sintomas } = cita;
+    const { mascota, propietario, fecha, time, sintomas } = cita;
+
+
+
+    //CUANDO EL USUARIO PRESIONA AGREGAR CITA
+    const submitCita = e => {
+        e.preventDefault();
+
+        //VALIDAR
+        //ASIGNAR UN ID
+        //CREAR LA CITA
+        //REINICIAR EL FORM
+
+
+        console.log('Enviando Form')
+    }
 
 
 
@@ -31,7 +46,9 @@ const Formulario = () => {
     return (
         <Fragment>
             <h2>Crear cita</h2>
-            <form>
+            <form
+                onSubmit={submitCita}
+            >
                 <label>Nombre mascota</label>
                 <input
                     type="text"
