@@ -27,11 +27,28 @@ const Formulario = () => {
 
 
 
+    //CUANDO EL USUARIO PRESIONA AGREGAR CITA
+    const submitCita = e => {
+        e.preventDefault();
+
+        //VALIDAR
+        //ASIGNAR UN ID
+        //CREAR LA CITA
+        //REINICIAR EL FORM
+
+
+        console.log('Enviando Form')
+    }
+
+
+
 
     return (
         <Fragment>
             <h2>Crear cita</h2>
-            <form>
+            <form
+                onSubmit={submitCita}
+            >
                 <label>Nombre mascota</label>
                 <input
                     type="text"
