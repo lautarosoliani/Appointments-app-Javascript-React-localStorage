@@ -23,7 +23,7 @@ const Formulario = () => {
 
 
     //EXTRAER LOS VALORES
-    const { mascota, propietario, fecha, hora, sintomas } = cita;
+    const { mascota, propietario, fecha, time, sintomas } = cita;
 
 
 
