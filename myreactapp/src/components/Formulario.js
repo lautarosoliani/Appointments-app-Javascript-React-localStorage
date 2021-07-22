@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import uuid from 'uuid/dist/v4'
 
 const Formulario = () => {
 
@@ -13,6 +14,7 @@ const Formulario = () => {
     });
 
     const [error, actualizarError] = useState(false)
+
     //Funcion que se ejecuta cada vez que el usuario escribe en un input
     const actualizarState = e => {
         actualizarCita({
@@ -34,7 +36,13 @@ const Formulario = () => {
             return;
         }
 
+        //ELIMINAR EL MENSAJE PREVIO
+        actualizarError(false);
+
         //ASIGNAR UN ID
+        cita.id = uuid();
+        console.log(cita);
+
         //CREAR LA CITA
         //REINICIAR EL FORM
 
