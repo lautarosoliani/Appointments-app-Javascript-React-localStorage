@@ -2,7 +2,6 @@ import React, { Fragment, useState } from 'react';
 
 const Formulario = () => {
 
-
     //Crear State de Citas
     const [cita, actualizarCita] = useState({
         mascota: '',
@@ -11,8 +10,9 @@ const Formulario = () => {
         hora: '',
         sintomas: '',
 
-    })
+    });
 
+    const [error, actualizarError] = useState(false)
     //Funcion que se ejecuta cada vez que el usuario escribe en un input
     const actualizarState = e => {
         actualizarCita({
@@ -21,23 +21,25 @@ const Formulario = () => {
         })
     }
 
-
     //EXTRAER LOS VALORES
-    const { mascota, propietario, fecha, time, sintomas } = cita;
-
-
+    const { mascota, propietario, fecha, hora, sintomas } = cita;
 
     //CUANDO EL USUARIO PRESIONA AGREGAR CITA
     const submitCita = e => {
         e.preventDefault();
 
-        //VALIDAR
+        //VALIDAR, si el input esta vacio no permite avanzar
+        if (mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || fecha.trim() === '' || sintomas.trim() === '') {
+            actualizarError(true);
+            return;
+        }
+
         //ASIGNAR UN ID
         //CREAR LA CITA
         //REINICIAR EL FORM
 
 
-        console.log('Enviando Form')
+
     }
 
 
@@ -46,6 +48,9 @@ const Formulario = () => {
     return (
         <Fragment>
             <h2>Crear cita</h2>
+
+            {error ? <p className="alerta-error">Todos los campos son obligatorios</p> : null}
+
             <form
                 onSubmit={submitCita}
             >
@@ -84,7 +89,7 @@ const Formulario = () => {
                     name="hora"
                     className="u-full-width"
                     onChange={actualizarState}
-                    value={time}
+                    value={hora}
                 />
 
                 <label>Sintomas</label>
