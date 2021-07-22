@@ -65,34 +65,34 @@ const Formulario = ({ crearCita }) => {
 
     return (
         <Fragment>
-            <h2>Crear cita</h2>
+            <h2>Make an appointment</h2>
 
-            {error ? <p className="alerta-error">Todos los campos son obligatorios</p> : null}
+            {error ? <p className="alerta-error">All fields are required</p> : null}
 
             <form
                 onSubmit={submitCita}
             >
-                <label>Nombre mascota</label>
+                <label>Pet's Name</label>
                 <input
                     type="text"
                     name="mascota"
                     className="u-full-width"
-                    placeholder="Nombre Mascota"
+                    placeholder="Your pet's name"
                     onChange={actualizarState}
                     value={mascota}
                 />
 
-                <label>Nombre dueño</label>
+                <label>Owner Name</label>
                 <input
                     type="text"
                     name="propietario"
                     className="u-full-width"
-                    placeholder="Nombre Dueño de la Mascota"
+                    placeholder="Your name"
                     onChange={actualizarState}
                     value={propietario}
                 />
 
-                <label>Fecha</label>
+                <label>Date</label>
                 <input
                     type="date"
                     name="fecha"
@@ -101,7 +101,7 @@ const Formulario = ({ crearCita }) => {
                     value={fecha}
                 />
 
-                <label>Hora</label>
+                <label>Time</label>
                 <input
                     type="time"
                     name="hora"
@@ -110,7 +110,7 @@ const Formulario = ({ crearCita }) => {
                     value={hora}
                 />
 
-                <label>Sintomas</label>
+                <label>Symptoms</label>
                 <textarea
                     className="u-full-width"
                     name="sintomas"
@@ -121,7 +121,7 @@ const Formulario = ({ crearCita }) => {
                 <button
                     type="submit"
                     className="u-full-width button-primary"
-                >Agregar cita</button>
+                >Make an appointment</button>
 
             </form>
         </Fragment>

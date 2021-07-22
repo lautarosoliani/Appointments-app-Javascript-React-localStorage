@@ -40,13 +40,13 @@ function App() {
 
 
   //Mensaje condicional
-  const titulo = citas.length === 0 ? 'No hay citas' : 'Administra tus citas';
+  const titulo = citas.length === 0 ? 'No appointments yet!' : 'Manage your appointments';
 
 
 
   return (
     <Fragment>
-      <h1>Turno Veterinario</h1>
+      <h1>Veterinary appointment</h1>
 
       <div className="container">
         <div className="row">
