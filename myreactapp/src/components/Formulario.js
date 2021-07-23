@@ -11,7 +11,7 @@ const Formulario = ({ crearCita }) => {
     // Para crear el State que nos va a permitir ir leyendo los diferentes campos:
     // Importar el useState a la linea 1
     // Elegir donde crearlo, en este caso en Formulario.js pero en otros puede ser en App.js
-    // Crear State de Citas que en este caso va a ser un objeto pero podria ser otra cosa (array, o funcion)
+    // Crear State de Citas que en este caso va a ser un objeto pero podria ser otra cosa (array con [], objeto con {}, o simplemente booleano queda nomas entre los parentesis)
     // En este caso, 'actualizarCita' me permite escribir/reescribir en el Objeto Cita cuando el usuario este escribiendo
     // Y esto es gracias al 'onChange' con la funcion que llame 'actualizarState' (LINEA 36)
     const [cita, actualizarCita] = useState({
@@ -60,6 +60,8 @@ const Formulario = ({ crearCita }) => {
 
 
         //VALIDAR -> '.trim' sirve para obligar al usuario a no dejar nada vacio, entonces uso -> 'name.trim'
+        //Para esto creo una nueva funcion llamada 'actualizarError' que inicia como 'false' porque logicamente no hay error en status quo inicial,
+        //pero si el usuario deja algun campo vacio entonces -> actualizarError(true)
         if (mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || fecha.trim() === '' || sintomas.trim() === '') {
             actualizarError(true);
             return;
