@@ -2,8 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import Formulario from './components/Formulario';
 import Cita from './components/Cita';
 
-//FRAMEWORK --> SKELETON
-//Second Commit corresponde al video 53 de Udemy
+
 
 function App() {
 
@@ -47,7 +46,7 @@ function App() {
   return (
     <Fragment>
       <h1>Veterinary appointment</h1>
-
+      {/* FRAMEWORK --> SKELETON --> tanto 'container' 'row' como 'one half column' pertenecen a Skeleton */}
       <div className="container">
         <div className="row">
           <div className="one-half column">
