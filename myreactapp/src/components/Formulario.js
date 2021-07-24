@@ -8,6 +8,7 @@ const Formulario = ({ crearCita }) => {
 
 
 
+
     // Para crear el State que nos va a permitir ir leyendo los diferentes campos:
     // Importar el useState a la linea 1
     // Elegir donde crearlo, en este caso en Formulario.js pero en otros puede ser en App.js
