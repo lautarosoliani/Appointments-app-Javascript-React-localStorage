@@ -12,7 +12,31 @@ function App() {
     citasIniciales = [];
   }
 
-  //ARRAY DE CITAS
+  //ARRAY DE CITAS. Aca van las citas nuevas, comineza vacio y se van agregando
+
+
+
+
+
+
+
+
+
+
+  //CONTINUAR ACA EN 59
+
+
+
+
+
+
+
+
+
+
+
+
+
   const [citas, guardarCitas] = useState(citasIniciales);
 
   //useEffect para realizar operaciones cuando el state cambia
