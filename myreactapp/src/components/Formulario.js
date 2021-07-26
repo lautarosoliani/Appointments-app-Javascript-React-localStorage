@@ -9,6 +9,7 @@ const Formulario = ({ crearCita }) => {
 
 
 
+
     // Para crear el State que nos va a permitir ir leyendo los diferentes campos:
     // Importar el useState a la linea 1
     // Elegir donde crearlo, en este caso en Formulario.js pero en otros puede ser en App.js
@@ -24,7 +25,8 @@ const Formulario = ({ crearCita }) => {
     });
 
 
-
+    // Este useState lo creo despues del paso 'Validar'. Tambien podria iniciar como 'Null'
+    // Luego va directo al 'fragment y debajo del 'h2' mando el " si error 'True' alerta error o sino 'Null' "
     const [error, actualizarError] = useState(false)
 
 
@@ -46,7 +48,7 @@ const Formulario = ({ crearCita }) => {
 
 
 
-    //Extraer los valores para ahorrarme escribir luego lo siguiente -> mascota.cita , propietario.cita , fecha.cita , etc.
+    //Extraer los valores del objeto 'cita' para ahorrarme escribir luego lo siguiente -> mascota.cita , propietario.cita , fecha.cita , etc.
     //Agrega 'Value' a los elementos de los Input y los nombra igual que el 'name' de cada input,
     //en este caso son Value={mascota}, Value={propietario}, etc. Para mas adelante 'resetear' los formularios
     const { mascota, propietario, fecha, hora, sintomas } = cita;
@@ -64,10 +66,9 @@ const Formulario = ({ crearCita }) => {
         //Para esto creo una nueva funcion llamada 'actualizarError' que inicia como 'false' porque logicamente no hay error en status quo inicial,
         //pero si el usuario deja algun campo vacio entonces -> actualizarError(true)
         if (mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || fecha.trim() === '' || sintomas.trim() === '') {
-            actualizarError(true);
+            actualizarError(true); //El return es 'para que no se siga ejecutando el codigo' 
             return;
         }
-
 
 
         //ELIMINAR EL MENSAJE PREVIO
