@@ -10,6 +10,21 @@ const Formulario = ({ crearCita }) => {
 
 
 
+
+
+
+    //CONTINUAR EN app.js EN 59
+
+
+
+
+
+
+
+
+
+
+
     // Para crear el State que nos va a permitir ir leyendo los diferentes campos:
     // Importar el useState a la linea 1
     // Elegir donde crearlo, en este caso en Formulario.js pero en otros puede ser en App.js
@@ -71,7 +86,7 @@ const Formulario = ({ crearCita }) => {
         }
 
 
-        //ELIMINAR EL MENSAJE PREVIO
+        //ELIMINAR EL MENSAJE "All fields are required", se va ese mensaje cuando todo esta sin espacios en blanco
         actualizarError(false);
 
 
