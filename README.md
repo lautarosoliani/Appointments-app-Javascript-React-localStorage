@@ -4,7 +4,8 @@
 <h1>📌PREVIEW</h1>
 <h4></h4>
 
-![hippo](https://media-exp1.licdn.com/dms/image/C4E22AQGTzD_53iAOyQ/feedshare-shrink_1280/0/1627363335077?e=1630540800&v=beta&t=rig2A5BOIzyS-lfEpCCGYncgHDBwYkHkFnGgz_XKrFQ)
+![2](https://github.com/lautarosoliani/React-Appointments-App/assets/72751465/454fa426-e568-408a-bd73-dd80291f9e06)
+
 <br>
 <br>
 <h1>💻 ONLINE WEBSITE </h1>
